@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Student Information</title>
+</head>
+<body>
+<div align="center">
+<form method="post" th:object="${matchObject}" th:action="@{/updateStudentData}">
+
+    <label>Enter Roll Number</label><br>
+    <input type="text"th:field="*{studentRollNumber}" readonly>
+    <br><br>
+
+    <label>Enter Student Name</label><br>
+    <input type="text" th:field="*{studentName}">
+    <br><br>
+
+    <label>Enter Contact Number</label><br>
+    <input type="text" th:field="*{studentContactNumber}">
+    <br><br>
+
+    <label>Enter Address</label><br>
+    <input type="text" th:field="*{studentAddress}">
+    <br><br>
+
+    <label>Enter Total Marks</label><br>
+    <input type="text" th:field="*{studentTotalMarks}">
+    <br><br>
+
+    <label>Enter Obtain Number</label><br>
+    <input type="text" th:field="*{studentObtainMarks}">
+    <br><br>
+
+
+    <input type="submit" class="btn btn-primary" value="UPDATE STUDENT">
+</form>
+</div>
+</body>
+</html>
